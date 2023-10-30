@@ -4,21 +4,8 @@ dotenv.config();
 import express from 'express';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
-import { info } from './src/logger/logger';
-import indexRouter from './src/routes/index.route';
-
-// import db from "./models/index";
-
-// try {
-//     db.sequelize.authenticate();
-//     console.log('Connection has been established successfully.');
-// } catch (error) {
-//     console.error('Unable to connect to the database:', error);
-// }
-// db.sequelize.sync();
-// db.sequelize.sync({ force: true }).then(() => {
-//   console.log("Drop and re-sync db.");
-// });
+import indexRouter from './src/routes/index.route.js';
+import { info } from "./src/logger/logger.js";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
